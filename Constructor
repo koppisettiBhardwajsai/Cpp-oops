@@ -1,0 +1,25 @@
+//Constructor
+
+class HumanBeing //class declaration
+{
+	//A constructor is a method which does not have any return type and which is called by default when an object is created
+private:
+	string name;
+	int age; 
+public:
+	HumanBeing(string word,int val){
+		name=word;
+		age=val;
+	}
+    void Display(){
+    	cout<<name<<" "<<age<<endl;
+    }
+};
+
+
+int main()
+{	
+	HumanBeing A("K.Bhardwaj Sai",18);
+	A.Display();
+	return 0;
+}
