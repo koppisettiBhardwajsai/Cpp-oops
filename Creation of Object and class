@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+class Human //class declaration
+{
+public: //Access Specifier
+	string name; //Attribute
+	//Function inside the class
+	void Introduce(){ //Member Function
+		cout<<"Hi i am "<<name<<endl;
+	}
+	void Introduce(); //function declaration
+};
+
+//Function outside the class
+void Human::Introduce(){ //scope resolution
+	cout<<"Hi i am "<<Human::name<<endl;
+}
+
+int main()
+{	
+//First and basic way to create a object	  
+	Human A;
+	A.name="K.Bhardwaj Sai";
+	A.Introduce();
+
+//Second way to create a object Dynamically and here the attributes cannot be accesed using . operator
+	Human *B=new Human();
+	B->name="KBS";
+	B->Introduce();
+
+//By accessing a object through another object using address
+	Human *c=&A;
+	//Here the pointer can be accesed through dot operator
+	//(*c).Introduce();
+	c->Introduce();
+	return 0;
+}
