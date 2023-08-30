@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+//Destructor
+
+class HumanBeing //class declaration
+{
+private:
+	string *name;
+	int *age; 
+public:
+	HumanBeing(string word="KBS",int val=18){
+		name=new string;
+		age=new int;
+		*name=word;
+		*age=val;
+	}
+	~HumanBeing(){
+		delete name;
+		delete age;
+	}
+};
+
+
+int main()
+{	
+	HumanBeing *A=new HumanBeing();
+    delete A;
+	return 0;
+}
