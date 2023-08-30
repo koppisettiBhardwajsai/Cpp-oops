@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+//Private Access Specifer
+
+class HumanBeing //class declaration
+{
+private:
+	int age;
+	string name;
+	//Here the public is used to access the private variables
+public:
+	void setdata(int val,string word){
+		age=val;
+		name=word;
+	}
+	void Getdata() //This function is used to print the data from the private access specifier
+	{
+		cout<<"I am "<<name<<" with age "<<age<<endl;
+	}
+};
+
+
+int main()
+{	
+	HumanBeing A;
+	A.setdata(18,"K.Bhardwaj Sai");
+	A.Getdata();
+	return 0;
+}
