@@ -1,0 +1,46 @@
+//Method Overloading && Copy constructor
+
+class HumanBeing //class declaration
+{
+private:
+	string name;
+	int age; 
+public:
+	HumanBeing(){ //Default called function(Constructor)
+		cout<<"No Name"<<" "<<0<<endl;
+	}
+	HumanBeing(string word,int val){
+		name=word;
+		age=val;
+	}
+	HumanBeing(string word){
+		name=word;
+		age=0;
+	}
+	HumanBeing(int val){
+		name="No Name";
+		age=val;
+	}
+	HumanBeing(HumanBeing &q){
+		name=q.name;
+		age=q.age;
+	}
+    void Display(){
+    	cout<<name<<" "<<age<<endl;
+    }
+};
+
+
+int main()
+{	
+	HumanBeing A("K.Bhardwaj Sai",18);
+	HumanBeing C("K.Bhardwaj Sai");
+	HumanBeing D(18);
+	HumanBeing E(A);
+	A.Display();
+	HumanBeing B;
+	C.Display();
+	D.Display();
+	E.Display();
+	return 0;
+}
